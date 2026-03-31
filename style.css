@@ -296,6 +296,17 @@ hr {
   padding: 9px 12px;
 }
 
+.section-nav a:hover {
+  text-decoration: underline;
+}
+
+.tag-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-bottom: 10px;
+}
+
 .tag-strip a {
   font-family: Arial, sans-serif;
   font-size: 11px;
@@ -308,7 +319,19 @@ hr {
   padding-top: 4px;
 }
 
-.section-nav a:hover {
+.tag-strip a:last-child {
+  border-right: none;
+}
+
+.tag-strip a.tag-first {
+  color: #111;
+}
+
+.footer-bottom a {
+  color: #666;
+}
+
+.footer-bottom a:hover {
   text-decoration: underline;
 }
 
@@ -355,6 +378,24 @@ hr {
   margin-bottom: 5px;
 }
 
+.story-row .story-text h3 {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.story-row .story-text p {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.thumb-item img {
+  height: 100px;
+  margin-bottom: 6px;
+}
+
 .thumb-item h3 {
   font-size: 13px;
   font-weight: 700;
@@ -367,23 +408,10 @@ hr {
   line-height: 1.25;
 }
 
-.story-row .story-text h3 {
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 5px;
-}
-
 .tip-bar p {
   font-family: Arial, sans-serif;
   font-size: 12px;
   color: #333;
-}
-
-.story-row .story-text p {
-  font-size: 13px;
-  color: #333;
-  margin-bottom: 5px;
 }
 
 .two-thumbs {
@@ -392,30 +420,10 @@ hr {
   gap: 14px;
 }
 
-.thumb-item img {
-  height: 100px;
-  margin-bottom: 6px;
-}
-
 .two-heads {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-}
-
-.tag-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-  margin-bottom: 10px;
-}
-
-.tag-strip a:last-child {
-  border-right: none;
-}
-
-.tag-strip a.tag-first {
-  color: #111;
 }
 
 .feature-story {
@@ -461,12 +469,12 @@ hr {
 .antarctica-caption h2 {
   font-size: 22px;
   font-weight: 700;
-  text-shadow: 1px 1px 4px rgba(0 0 0 7%);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.07);
 }
 
 .antarctica-caption p {
   font-size: 12px;
-  text-shadow: 1px 1px 3px rgba(0 0 0 7%);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.07);
   margin-top: 4px;
 }
 
@@ -618,15 +626,15 @@ hr {
   margin-bottom: 3px;
 }
 
-.culture-aside-item p {
-  font-size: 12px;
-  color: #333;
-}
-
 .culture-aside-item img {
   width: 65px;
   height: 55px;
   flex-shrink: 0;
+}
+
+.culture-aside-item p {
+  font-size: 12px;
+  color: #333;
 }
 
 .audio-grid {
@@ -655,7 +663,7 @@ hr {
   font-weight: bold;
   color: #666;
   text-transform: uppercase;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   margin-bottom: 3px;
 }
 
@@ -835,7 +843,7 @@ hr {
   margin-top: 8px;
 }
 
-.op-list { 
+.op-list {
   display: flex;
   flex-direction: column;
 }
@@ -891,7 +899,7 @@ footer {
 }
 
 .footer-logo {
-  font-family: "Old English Text MT", "UnifrakturMaguntia", Georgia, serif;
+  font-family: "Old English Text MT", UnifrakturMaguntia, Georgia, serif;
   font-size: 28px;
   text-align: center;
   margin-bottom: 20px;
@@ -911,7 +919,7 @@ footer {
   font-size: 11px;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: .07em;
+  letter-spacing: 0.07em;
   margin-bottom: 8px;
 }
 
@@ -938,16 +946,7 @@ footer {
   color: #666;
 }
 
-.footer-bottom a {
-  color: #666;
-}
-
-.footer-bottom a:hover {
-  text-decoration: underline;
-}
-
 @media (max-width: 900px) {
-
   .page-wrap {
     grid-template-columns: 1fr;
   }
@@ -973,7 +972,7 @@ footer {
     font-size: 28px;
   }
 
-  .news-grid  {
+  .news-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -985,18 +984,19 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .well-grid  {
+  .well-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .videos-grid { 
-    grid-template-columns: repeat(3, 1fr); }
+  .videos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
-  .audio-grid  {
+  .audio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .games-grid  {
+  .games-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1046,8 +1046,9 @@ footer {
 }
 
 @media (max-width: 600px) {
-
-  .logo { font-size: 22px; }
+  .logo {
+    font-size: 22px;
+  }
 
   .story-row {
     grid-template-columns: 1fr;
@@ -1083,49 +1084,49 @@ footer {
 
   .videos-grid {
     grid-template-columns: repeat(2, 1fr);
-   }
+  }
 
   .audio-grid {
     grid-template-columns: 1fr;
-   }
+  }
 
   .games-grid {
     grid-template-columns: repeat(2, 1fr);
-   }
+  }
 
   .game-item:nth-child(3n) {
     border-right: 1px solid #e2e2e2;
-   }
+  }
 
   .game-item:nth-child(2n) {
     border-right: none;
-   }
+  }
 
   .culture-grid {
     grid-template-columns: 1fr;
-   }
+  }
 
   .more-news-grid {
     grid-template-columns: 1fr;
-   }
+  }
 
   .feature-story {
     grid-template-columns: 1fr;
-   }
+  }
 
   .side-two {
     grid-template-columns: 1fr;
-   }
+  }
 
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
-   }
+  }
 
   .antarctica-caption h2 {
     font-size: 16px;
-   }
+  }
 
   .antarctica-caption p {
-  font-size: 11px;
-   }
+    font-size: 11px;
+  }
 }
